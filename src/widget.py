@@ -10,8 +10,8 @@ def mask_account_card(inf_account_card: str) -> str:
     else:
         number_card = inf_account_card[-16:]
         mask_card = get_mask_card_number(number_card)
-        name_bank = inf_account_card[:-16]
-        return f"{name_bank}{mask_card}"
+        card_type = inf_account_card[:-16]
+        return f"{card_type}{mask_card}"
 
 
 def get_date(formatting_date: str) -> str:
